@@ -1,7 +1,7 @@
 /* Estilos generales */
 @font-face {
     font-family: 'HarryPotterIntro';
-    src: url('harry_p/HARRYP__.TTF') format('truetype');
+    src: url('/harry_p/HARRYP__.TTF') format('truetype');
 }
 
 body {
