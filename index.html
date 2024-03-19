@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>🔒 Encriptador / Desencriptador</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Encriptador de textos</h1>
+    </header>
+    <main>
+        
+        <section class="encriptador">
+            <div id="encriptador" class="ingreso-texto">
+                <h2>Encripta tu texto</h2>
+                <div class="centrar-div">
+                    <textarea id="encriptar" class="textarea-error" placeholder="Ingresa tu texto aquí" onkeypress="return validacionLetras(event,encriptar)"></textarea>
+                    <p class="info">No se permiten acentos, caracteres especiales, ni letras mayúsculas.</p>
+                    <div class="botones">
+                        <button class="encriptar btn" onclick="encriptacion();">Encriptar</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="resultado" id="en">
+                <h2 id="resultado-texto-en">Resultado</h2>
+                <div class="container-resultado">
+                    <textarea name="resultado-encriptado" id="resultado-encriptado"></textarea>
+                    <p class="info auto-eliminacion" id="autoDestruccionEn"></p>
+                    <div class="botones">
+                        <button class="resultado-encriptado-btn" onclick="copiarTexto(resultadoEncriptar)" >Copiar Texto</button>
+                        <button  id="limpiarTexto-Encriptar" onclick="limpiarTexto(resultadoEncriptar);">Limpiar Texto</button>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="desencriptadora">
+            <div id="desincriptadora" class="ingreso-texto">
+                <h2>Desencripta tu texto</h2>
+                <div class="centrar-div">
+                    <textarea  id="desencriptar" placeholder="Ingresa tu texto aquí" onkeypress="return validacionLetras(event)"></textarea>
+                    <p class="info"> No se permiten acentos, caracteres especiales, ni letras mayúsculas.</p>
+                    <div class="botones">
+                        <button class="desencriptar" onclick="desencriptacion()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resultado" id="des">
+                <h2 id="resultado-texto-des">Resultado</h2>
+                <div class="container-resultado">
+                    <textarea name="resultado-desencriptado" id="resultado-desencriptado"></textarea>
+                    <p class="info auto-eliminacion" id="autoDestruccionDes"></p>
+                    <div class="botones">
+                        <button class="resultado-desencriptado-btn " onclick="copiarTexto(resultadoDesencriptar)">Copiar Texto</button>
+                        <button  id="limpiarTexto-desencriptado" onclick="limpiarTexto(resultadoDesencriptar);">Limpiar Texto</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Valentina Atehortúa Zapata.</p>
+        
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</body>
+</html>
